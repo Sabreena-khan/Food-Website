@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Great+Vibes&family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Navbar Start */
+    .logo {
+      width: 70px;
+      height: 70px;
+    }
+
+    .Navbar {
+      background-color: rgb(251, 251, 238);
+    }
+
+    .logo-name {
+      font-family: 'Lobster', cursive;
+      font-weight: 400;
+    }
+
+    .navbar,
+    .nav-link {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+
+    .Navbar ul {
+      margin: 0px 10px;
+    }
+
+    .Navbar ul li {
+      list-style: none;
+      font-size: 1.3rem;
+    }
+
+    .Navbar ul li a {
+      display: block;
+      color: rgb(0, 0, 0);
+      padding: 0px 20px;
+      text-decoration: none;
+      font-size: 25px;
+    }
+
+    /* Center-outward underline effect */
+    .Navbar ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: rgb(252, 172, 0);
+      transform: translateX(-50%);
+      transition: width 0.2s ease;
+    }
+
+    .Navbar ul li a:hover::after {
+      width: 70%;
+    }
+
+    .Navbar a:hover {
+      color: rgb(0, 0, 0);
+      transform: scale(1.3);
+    }
+
+    /* Navbar end */
+
+    body {
+      background: #fff8f0;
+      color: #5a3e1b;
+      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+      color: #d35400;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      padding: 130px 20px 100px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(211, 84, 0, 0.6);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px #7a3b00;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      text-shadow: 1px 1px 3px #7a3b00;
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      margin: 60px 0;
+    }
+
+    .about-text {
+      flex: 1 1 450px;
+    }
+
+    .about-text h2 {
+      font-size: 2.8rem;
+      color: #d35400;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #6e4a18;
+    }
+
+    .about-image {
+      flex: 1 1 450px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(211, 84, 0, 0.3);
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    /* Values Section */
+    .values {
+      background-color: #fde8d0;
+      padding: 50px 20px;
+      border-radius: 16px;
+      margin-bottom: 60px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .values h2 {
+      text-align: center;
+      color: #a84300;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .values-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .value-item {
+      background: white;
+      flex: 1 1 260px;
+      padding: 30px 20px;
+      border-radius: 14px;
+      box-shadow: 0 5px 15px rgba(211, 84, 0, 0.15);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .value-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(211, 84, 0, 0.3);
+    }
+
+    .value-icon {
+      font-size: 48px;
+      color: #d35400;
+      margin-bottom: 15px;
+    }
+
+    .value-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #a84300;
+    }
+
+    .value-desc {
+      font-size: 1rem;
+      color: #6e4a18;
+    }
+
+    /* Team Section */
+    .team {
+      max-width: 1100px;
+      margin: auto;
+      margin-bottom: 60px;
+      padding: 0 20px;
+    }
+
+    .team h2 {
+      text-align: center;
+      color: #d35400;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .team-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      background: white;
+      flex: 1 1 220px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(211, 84, 0, 0.15);
+      text-align: center;
+      padding: 25px 20px;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(211, 84, 0, 0.3);
+    }
+
+    .team-member img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #d35400;
+    }
+
+    .member-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: #a84300;
+    }
+
+    .member-role {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #6e4a18;
+      margin-bottom: 10px;
+    }
+
+    .member-bio {
+      font-size: 0.95rem;
+      color: #7f5a26;
+    }
+
+    /* CTA Section */
+    .cta {
+      background-color: #d35400;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 16px;
+      margin-bottom: 60px;
+    }
+
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about {
+        flex-direction: column;
+      }
+
+      .values-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav style="background-color: 
+  rgb(251, 251, 238) !important;" class="navbar navbar-expand-lg m-auto bg-body-tertiary">
+    <div class="container-fluid">
+      <img src="logo spoon2.png" class="logo">
+      <h1 class="logo-name">Foodie-Bite</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse Navbar navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav fs-3 ms-md-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+        </ul>
+        <button style="background-color: darkorange; font-weight: 700;" class="btn btn-" type="submit">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Fresh Flavors, Authentic Taste</h1>
+      <p>At Foodies Delight, we serve happiness on a plate every day.</p>
+    </div>
+  </section>
+
+  <div class="container">>
+    <section class="about" aria-labelledby="about-heading">
+      <div class="about-text">
+        <h2 id="about-heading">Our Story</h2>
+        <p>
+          Since 2010, Foodies Delight has been passionately crafting delicious meals using fresh, locally sourced
+          ingredients. Our mission is to bring the joy of authentic flavors right to your table.
+        </p>
+        <p>
+          We believe good food connects people and creates unforgettable memories.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="Food.jpg">
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values" aria-labelledby="values-heading">
+      <h2 id="values-heading">What We Stand For</h2>
+      <div class="values-list">
+        <div class="value-item">
+          <div class="value-icon"><i class="fas fa-leaf"></i></div>
+          <div class="value-title">Fresh Ingredients</div>
+          <div class="value-desc">Only the best, freshest ingredients make it to our kitchen.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><i class="fas fa-utensils"></i></div>
+          <div class="value-title">Authentic Recipes</div>
+          <div class="value-desc">Recipes inspired by tradition, perfected with love.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><i class="fas fa-heart"></i></div>
+          <div class="value-title">Customer Love</div>
+          <div class="value-desc">We cherish our community and value your trust.</div>
+        </div>
+      </div>
+    </section>
+    <section class="team" aria-labelledby="team-heading">
+      <h2 id="team-heading">Meet Our Chefs</h2>
+      <div class="team-list">
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Chef Michael" />
+          <div class="member-name">Saad khan</div>
+          <div class="member-role">Head Chef</div>
+          <div class="member-bio">Bringing decades of culinary experience to every dish.</div>
+        </div>
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Chef Anna" />
+          <div class="member-name">Samra Sameer</div>
+          <div class="member-role">Pastry Chef</div>
+          <div class="member-bio">Master of desserts and sweet creations.</div>
+        </div>
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Chef David" />
+          <div class="member-name">Ahmed Baloch</div>
+          <div class="member-role">Sous Chef</div>
+          <div class="member-bio">Ensuring every meal is perfect down to the last bite.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" role="region" aria-label="Call to Action">
+      <h2>Ready for a Delicious Experience?</h2>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

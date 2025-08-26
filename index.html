@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="cutlery.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Great+Vibes&family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .carousel-item {
+      position: relative;
+      color: black;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav style="background-color: 
+  rgb(251, 251, 238) !important;" class="navbar navbar-expand-lg m-auto bg-body-tertiary">
+    <div class="container-fluid">
+      <img src="logo spoon2.png" class="logo">
+      <h1 class="logo-name">Foodie-Bite</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse Navbar navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav fs-3 ms-md-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+        </ul>
+        <button style="background-color: darkorange; font-weight: 700;" class="btn btn-" type="submit">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- First Slide -->
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img class="pics d-block w-100" src="https://images.pexels.com/photos/5971866/pexels-photo-5971866.jpeg">
+        <div class="hero">
+          <div class="herocontain">Best Website in Food</div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item" data-bs-interval="900">
+        <img class="pics d-block w-100" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg"
+          alt="...">
+        <div class="hero">
+          <div class="herocontain">Delicious Recipes</div>
+        </div>
+      </div>
+
+      <!-- Third Slide -->
+      <div class="carousel-item">
+        <img class="pics d-block w-100" src="https://images.pexels.com/photos/7627419/pexels-photo-7627419.jpeg"
+          alt="...">
+        <div class="hero">
+          <div class="herocontain">Peaceful Environment</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+
+  <div id="Main-section">
+    <div class="container">
+      <h1 class="second-head">OUR SERVICES</h1>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="mx-auto" style="width: 80%; ">
+            <img style="width: 100%;" src="re.jpg">
+            <h1 class="f-heading">Restaurants</h1>
+            <p class="f-para" style="font-family: 'Roboto', sans-serif;">From Pakistani and Afghani Cuisine to Thai and Chinese Cuisine, discover and savor the
+              scrumptious flavors from all around the globe with Foodies</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="mx-auto" style="width: 80%;">
+            <img style="width: 100%;" src="Develievery man.jpg">
+            <h1 class="f-heading">Food Delivery Avaliable</h1>
+            <p class="f-para"style="font-family: 'Roboto', sans-serif;">Get your favorite meals delivered hot and fresh to your doorstep.Our quick and reliable
+              food
+              delivery service ensures satisfaction in every bite anytime</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="second-head">CUISINE</h1>
+  <div class="Thrid-section">
+    <div>
+      <img src="burger.jpg" class="thrid-section-images">
+      <h3>Burger</h3>
+    </div>
+    <div>
+      <img src="pizza.jpg" class="thrid-section-images">
+      <h3>Pizza</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2024/08/22/09/51/cake-8988890_960_720.jpg" class="thrid-section-images">
+      <h3>Cake</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2022/11/04/00/40/juice-7568712_640.jpg" class="thrid-section-images">
+      <h3>Juice</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2022/08/27/14/02/kebab-meat-sandwich-7414529_1280.jpg"
+        class="thrid-section-images">
+      <h3>Sharwama</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2015/04/08/13/13/food-712665_640.jpg" class="thrid-section-images">
+      <h3>Fish</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2016/03/17/15/26/strawberry-roll-1263099_640.jpg"
+        class="thrid-section-images">
+      <h3>Deserts</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2021/05/04/10/32/food-6228244_640.jpg" class="thrid-section-images">
+      <h3>Afghani</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2022/06/23/09/40/salad-7279405_640.jpg" class="thrid-section-images">
+      <h3>Italic</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2023/05/27/13/49/soup-8021570_640.jpg" class="thrid-section-images">
+      <h3>Soups</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2014/05/03/14/21/meals-337073_640.jpg" class="thrid-section-images">
+      <h3>Fast Food</h3>
+    </div>
+    <div>
+      <img src="https://cdn.pixabay.com/photo/2015/02/08/14/29/thai-food-628558_640.jpg" class="thrid-section-images">
+      <h3>Chinese</h3>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Foodie-Bite</h2>
+        <p>Small Bites. Big Flavors.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Order</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="logo">
+          <i class="fab fa-facebook-f logof"></i>
+          <i class="fab fa-instagram logoin"></i>
+          <i class="fab fa-twitter logot"></i>
+          <i class="fab fa-youtube logoy"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FoodieBit. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

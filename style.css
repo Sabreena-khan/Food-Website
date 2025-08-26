@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ .h-primary{
+    font-size: 2.5rem;}
+/* Navbar Start */
+.logo{
+    width: 70px;
+    height: 70px;
+    }
+.logo-name {
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+}
+
+.navbar, .nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.Navbar {
+  background-color: rgb(251, 251, 238);
+}
+
+.Navbar ul {
+  margin: 0px 10px;
+}
+
+.Navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.Navbar ul li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 0px 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+/* Center-outward underline effect */
+.Navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -0px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: rgb(252, 172, 0);
+  transform: translateX(-50%);
+  transition: width 0.2s ease;
+}
+.Navbar ul li a:hover::after {
+  width: 70%;
+}
+.Navbar a:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.3);
+}
+/* Navbar end */
+.pics{width: 100%; height: 600px;}
+
+.herocontain {
+  font-family: 'Lobster', cursive;
+  margin-top: 15%;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgb(0, 0, 0); 
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 6px;
+}
+/* focus boxes start */
+#Main-section{
+
+  background-color:rgb(243, 243, 224);
+}
+.boxes{
+  display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 30px;
+}
+.box1{
+  width: 400px;
+  height: 300px;
+display: flex;
+flex-direction: column;
+}
+img{
+  width: 450px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.second-head{
+justify-content: center;
+text-align: center;
+  margin-top: 1%;
+  font-size: 3rem;}
+.f-para{
+  margin-top: 0%;
+   font-size:18px;
+}
+.f-heading{
+  margin-top: 3%;
+}
+/* img:hover{ transform: scale(1.1);
+transition: 0.3s ease-in-out;} */
+
+/* focus boxes start */
+.second-head {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Main section ka background aur padding */
+.Thrid-section {
+  background-color: rgb(243, 243, 224);
+  padding: 20px;
+}
+
+/* Wrapper to arrange images in row with gap */
+.Thrid-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Har image + name ek card banega */
+.Thrid-section > div {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image ka styling */
+.thrid-section-images {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Image ke neeche h3 ka style */
+.Thrid-section h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.Thrid-section > div:hover {
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+/* footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #f4b400;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+.logo{
+  display: flex;
+  gap: 20px;
+}
+.footer-links a,
+.logo a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+}
+
+.logof:hover { color: #1877f2; }   /* Facebook */
+.logoin:hover { color: #e1306c; }  /* Instagram */
+.logot:hover { color: #1da1f2; }   /* Twitter */
+.logoy:hover { color: #ff0000; }   /* YouTube */
+
+.footer-links a:hover {
+  color: #ffd000;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  color: #aaa;
+}
+
