@@ -1,20 +1,14 @@
-/* Global Reset */
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Headings */
 .h-primary {
   font-size: 2.5rem;
 }
 
-/* Navbar */
 .logo {
   width: 70px;
   height: 70px;
@@ -36,8 +30,6 @@ body {
 
 .Navbar ul {
   margin: 0 10px;
-  display: flex;
-  align-items: center;
 }
 
 .Navbar ul li {
@@ -48,14 +40,12 @@ body {
 .Navbar ul li a {
   display: block;
   color: rgb(0, 0, 0);
-  padding: 10px 20px;
+  padding: 0 20px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   position: relative;
-  transition: transform 0.3s ease;
 }
 
-/* Underline Hover Effect */
 .Navbar ul li a::after {
   content: "";
   position: absolute;
@@ -67,25 +57,25 @@ body {
   transform: translateX(-50%);
   transition: width 0.2s ease;
 }
+
 .Navbar ul li a:hover::after {
   width: 70%;
 }
+
 .Navbar a:hover {
   color: rgb(0, 0, 0);
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
-/* Hero Section (Slider Text) */
 .pics {
   width: 100%;
   height: 600px;
-  object-fit: cover;
 }
 
 .herocontain {
   font-family: 'Lobster', cursive;
   margin-top: 15%;
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-size: 3.5rem;
   color: #fff;
   text-shadow: 2px 2px 8px rgb(0, 0, 0);
   padding: 5px 10px;
@@ -93,16 +83,17 @@ body {
   border-radius: 6px;
 }
 
-/* Main Section */
 #Main-section {
   background-color: rgb(243, 243, 224);
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .second-head {
+  width: 100%;
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 30px;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 .boxes {
@@ -113,72 +104,63 @@ body {
 }
 
 .box1 {
-  width: 350px;
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.box1 img {
-  width: 100%;
-  height: 250px;
+img {
+  width: 450px;
+  height: 300px;
   border-radius: 10px;
   cursor: pointer;
-  object-fit: cover;
-  transition: transform 0.3s ease;
 }
-.box1 img:hover {
-  transform: scale(1.05);
+
+.f-para {
+  margin-top: 0;
+  font-size: 18px;
 }
 
 .f-heading {
-  margin-top: 10px;
-  font-size: 1.5rem;
-}
-.f-para {
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 5px;
+  margin-top: 3%;
 }
 
-/* Third Section (Cuisine Cards) */
-.Third-section {
+.Thrid-section {
   background-color: rgb(243, 243, 224);
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 
-.Third-section > div {
+.Thrid-section > div {
   background-color: white;
   border-radius: 15px;
   padding: 10px;
-  width: 250px;
   text-align: center;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Third-section > div:hover {
+.Thrid-section > div:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.Third-section img {
+.thrid-section-images {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.Third-section h3 {
+.Thrid-section h3 {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Footer */
 .footer {
   background-color: #222;
   color: #fff;
@@ -210,6 +192,11 @@ body {
   margin-bottom: 10px;
 }
 
+.logo {
+  display: flex;
+  gap: 20px;
+}
+
 .footer-links a,
 .logo a {
   color: #ccc;
@@ -217,10 +204,21 @@ body {
   transition: color 0.3s ease;
 }
 
-.logof:hover { color: #1877f2; }
-.logoin:hover { color: #e1306c; }
-.logot:hover { color: #1da1f2; }
-.logoy:hover { color: #ff0000; }
+.logof:hover {
+  color: #1877f2;
+}
+
+.logoin:hover {
+  color: #e1306c;
+}
+
+.logot:hover {
+  color: #1da1f2;
+}
+
+.logoy:hover {
+  color: #ff0000;
+}
 
 .footer-links a:hover {
   color: #ffd000;
