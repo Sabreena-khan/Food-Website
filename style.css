@@ -1,16 +1,25 @@
-body {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
- .h-primary{
-    font-size: 2.5rem;}
-/* Navbar Start */
-.logo{
-    width: 70px;
-    height: 70px;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Headings */
+.h-primary {
+  font-size: 2.5rem;
+}
+
+/* Navbar */
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
 .logo-name {
   font-family: 'Lobster', cursive;
   font-weight: 400;
@@ -26,7 +35,9 @@ body {
 }
 
 .Navbar ul {
-  margin: 0px 10px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 .Navbar ul li {
@@ -37,15 +48,18 @@ body {
 .Navbar ul li a {
   display: block;
   color: rgb(0, 0, 0);
-  padding: 0px 20px;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
 }
-/* Center-outward underline effect */
+
+/* Underline Hover Effect */
 .Navbar ul li a::after {
   content: "";
   position: absolute;
-  bottom: -0px;
+  bottom: 0;
   left: 50%;
   width: 0;
   height: 2px;
@@ -58,108 +72,113 @@ body {
 }
 .Navbar a:hover {
   color: rgb(0, 0, 0);
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
-/* Navbar end */
-.pics{width: 100%; height: 600px;}
+
+/* Hero Section (Slider Text) */
+.pics {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
 
 .herocontain {
   font-family: 'Lobster', cursive;
   margin-top: 15%;
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
   color: #fff;
-  text-shadow: 2px 2px 8px rgb(0, 0, 0); 
+  text-shadow: 2px 2px 8px rgb(0, 0, 0);
   padding: 5px 10px;
   display: inline-block;
   border-radius: 6px;
 }
-/* focus boxes start */
-#Main-section{
 
-  background-color:rgb(243, 243, 224);
+/* Main Section */
+#Main-section {
+  background-color: rgb(243, 243, 224);
+  padding: 40px 20px;
 }
-.boxes{
+
+.second-head {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 3rem;
+}
+
+.boxes {
   display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
 }
-.box1{
-  width: 400px;
-  height: 300px;
-display: flex;
-flex-direction: column;
+
+.box1 {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-img{
-  width: 450px;
-  height: 300px;
+
+.box1 img {
+  width: 100%;
+  height: 250px;
   border-radius: 10px;
   cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
-.second-head{
-justify-content: center;
-text-align: center;
-  margin-top: 1%;
-  font-size: 3rem;}
-.f-para{
-  margin-top: 0%;
-   font-size:18px;
+.box1 img:hover {
+  transform: scale(1.05);
 }
-.f-heading{
-  margin-top: 3%;
-}
-/* img:hover{ transform: scale(1.1);
-transition: 0.3s ease-in-out;} */
 
-/* focus boxes start */
-.second-head {
-  width: 100%;
+.f-heading {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.f-para {
+  font-size: 1rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 5px;
 }
 
-/* Main section ka background aur padding */
-.Thrid-section {
+/* Third Section (Cuisine Cards) */
+.Third-section {
   background-color: rgb(243, 243, 224);
   padding: 20px;
-}
-
-/* Wrapper to arrange images in row with gap */
-.Thrid-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-/* Har image + name ek card banega */
-.Thrid-section > div {
+.Third-section > div {
   background-color: white;
   border-radius: 15px;
   padding: 10px;
   width: 250px;
   text-align: center;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image ka styling */
-.thrid-section-images {
+.Third-section > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Third-section img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-/* Image ke neeche h3 ka style */
-.Thrid-section h3 {
+.Third-section h3 {
   margin-top: 10px;
   font-size: 20px;
 }
-.Thrid-section > div:hover {
-  transform: scale(1.05); /* Zoom in */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
-}
-/* footer */
+
+/* Footer */
 .footer {
   background-color: #222;
   color: #fff;
@@ -190,22 +209,18 @@ transition: 0.3s ease-in-out;} */
 .footer-links ul li {
   margin-bottom: 10px;
 }
-.logo{
-  display: flex;
-  gap: 20px;
-}
+
 .footer-links a,
 .logo a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
-  
 }
 
-.logof:hover { color: #1877f2; }   /* Facebook */
-.logoin:hover { color: #e1306c; }  /* Instagram */
-.logot:hover { color: #1da1f2; }   /* Twitter */
-.logoy:hover { color: #ff0000; }   /* YouTube */
+.logof:hover { color: #1877f2; }
+.logoin:hover { color: #e1306c; }
+.logot:hover { color: #1da1f2; }
+.logoy:hover { color: #ff0000; }
 
 .footer-links a:hover {
   color: #ffd000;
@@ -218,4 +233,3 @@ transition: 0.3s ease-in-out;} */
   border-top: 1px solid #444;
   color: #aaa;
 }
-
